@@ -1,0 +1,26 @@
+meta {
+  name: Nowe-haslo
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/api/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{email}}",
+    "password": "NoweHaslo1234!"
+  }
+}
+
+tests {
+  test("200, nowe hasło działa", () => {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody().token).to.be.a("string");
+    bru.setVar("jwt", res.getBody().token);
+  });
+}

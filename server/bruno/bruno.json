@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Auth API - rejestracja, JWT, reset i testy",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

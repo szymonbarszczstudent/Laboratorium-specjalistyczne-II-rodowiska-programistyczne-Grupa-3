@@ -1,0 +1,23 @@
+meta {
+  name: Zapomniane-haslo
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/auth/forgot-password
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{email}}"
+  }
+}
+
+tests {
+  test("202, potwierdzenie bez ujawniania istnienia konta", () => {
+    expect(res.getStatus()).to.equal(202);
+  });
+}

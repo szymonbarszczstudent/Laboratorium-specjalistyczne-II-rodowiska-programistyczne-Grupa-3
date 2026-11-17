@@ -1,0 +1,22 @@
+meta {
+  name: Profil-po-ponownym-logowaniu
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/api/auth/me
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{jwt}}
+}
+
+tests {
+  test("Nowy JWT daje dostęp do profilu", () => {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody().email).to.equal(bru.getVar("email"));
+  });
+}
