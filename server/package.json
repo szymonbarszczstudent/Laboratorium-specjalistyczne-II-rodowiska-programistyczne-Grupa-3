@@ -1,24 +1,35 @@
 {
-  "name": "server",
+  "name": "auth-api-node-express-tests",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/server.js",
+  "private": true,
+  "description": "Serwer rejestracji, logowania, resetu hasła i testów — bez dodatkowych usług",
   "scripts": {
+    "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "tsc --watch",
-    "test": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "jest --runInBand",
+    "test:api": "cd bruno && bru run --env local --reporter-html ../bruno-report.html"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^24.0.10",
-    "express": "5.3.0",
-    "sequelize": "6.37.8",
-    "sqlite3": "6.0.1",
-    "typescript": "^7.0.2"
+    "bcryptjs": "^3.0.0",
+    "express": "^5.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "nodemailer": "^7.0.0",
+    "sequelize": "^6.37.0",
+    "sqlite3": "^5.1.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/jsonwebtoken": "^9.0.0",
+    "@types/node": "^24.0.0",
+    "@types/nodemailer": "^7.0.0",
+    "@usebruno/cli": "^3.0.0",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
   }
 }

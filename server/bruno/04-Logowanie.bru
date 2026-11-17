@@ -1,0 +1,27 @@
+meta {
+  name: Logowanie
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{email}}",
+    "password": "Haslo1234!"
+  }
+}
+
+tests {
+  test("200 i token JWT", () => {
+    expect(res.getStatus()).to.equal(200);
+    const b = res.getBody();
+    expect(b.token).to.be.a("string");
+    bru.setVar("jwt", b.token);
+  });
+}

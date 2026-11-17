@@ -1,0 +1,24 @@
+meta {
+  name: Stare-haslo
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/api/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{email}}",
+    "password": "Haslo1234!"
+  }
+}
+
+tests {
+  test("401, stare hasło nie działa", () => {
+    expect(res.getStatus()).to.equal(401);
+  });
+}

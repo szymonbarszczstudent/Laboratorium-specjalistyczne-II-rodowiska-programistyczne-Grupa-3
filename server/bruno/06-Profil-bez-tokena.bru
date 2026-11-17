@@ -1,0 +1,17 @@
+meta {
+  name: Profil-bez-tokena
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/auth/me
+  body: none
+  auth: none
+}
+
+tests {
+  test("401 gdy brakuje nagłówka Authorization", () => {
+    expect(res.getStatus()).to.equal(401);
+  });
+}

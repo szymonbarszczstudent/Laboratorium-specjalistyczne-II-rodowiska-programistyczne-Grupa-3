@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+<rect width="900" height="500" fill="#F5F8FB" rx="12" />
+<polygon points="450,54 348,207 552,207" fill="#D99554" stroke="#FFFFFF" stroke-width="6" />
+<polygon points="348,207 263,346 637,346 552,207" fill="#358BAA" stroke="#FFFFFF" stroke-width="6" />
+<polygon points="263,346 162,473 738,473 637,346" fill="#23886F" stroke="#FFFFFF" stroke-width="6" />
+<text x="450" y="148" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="white">E2E</text>
+<text x="450" y="178" font-family="DejaVu Sans,sans-serif" font-size="15" text-anchor="middle" fill="white">Bruno CLI</text>
+<text x="450" y="270" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="white">INTEGRACYJNE</text>
+<text x="450" y="310" font-family="DejaVu Sans,sans-serif" font-size="17" text-anchor="middle" fill="white">Jest + SQLite</text>
+<text x="450" y="404" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="white">JEDNOSTKOWE</text>
+<text x="450" y="444" font-family="DejaVu Sans,sans-serif" font-size="18" text-anchor="middle" fill="white">Jest</text>
+</svg>
